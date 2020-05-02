@@ -14,7 +14,7 @@ func main()  {
 
 	routerGroup := router.Group("/api/v1/todo")
 	{
-		routerGroup.GET("/", todoController.GetAllTodos)
+		routerGroup.GET("", todoController.GetAllTodos)
 		routerGroup.GET("/:id", todoController.GetTodo)
 		routerGroup.POST("/", todoController.CreateATodo)
 		routerGroup.PUT("/:id", todoController.UpdateATodo)
